@@ -147,3 +147,39 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+
+# BEGIN D1 PRIVATE DATA SAFEGUARDS
+# Private patient-derived datasets and test artifacts.
+*.h5ad
+*.h5
+*.hdf5
+*.zarr/
+*.zip
+*.tar.gz
+*.fastq
+*.fastq.gz
+*.bam
+*.cram
+
+# Local-only experiments and data directories.
+/d1-candidate/
+/private/
+/inputs/
+/data/
+/outputs/
+/results/
+/evidence/
+
+# END D1 PRIVATE DATA SAFEGUARDS
+
+# Additional rules from original checkout
+*.h5ad.*
+*.npz
+*.mtx
+*.mtx.gz
+**/outputs/
+**/private_fixtures/
+**/logs/
+__pycache__/
+*.pyc
