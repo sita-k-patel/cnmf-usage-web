@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.h5ad binary
+*.npz binary
+*.whl binary
+
+# Preserve byte-exact reference SHA-256 across Git checkouts
+assets/references/*.tsv -text
+assets/references/*.txt -text

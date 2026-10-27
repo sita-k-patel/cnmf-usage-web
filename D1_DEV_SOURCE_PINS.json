@@ -1,0 +1,96 @@
+{
+  "stage": "D1 increment 1 PRELIMINARY implementation; not C2",
+  "engine_sha256": "74f9092011f378142ae12653d2eff91f3768da102ce6a773c42ee480ea6cd714",
+  "reference_sha256": {
+    "human_adult_glioma_allcell_k18": "7c1268595ba81dd6b941616bdb9e3c61b674875d9ec0cf0862ce4c24e5e17981",
+    "human_glioma_myeloid_k14": "03cd42331345d64ed8a0583ea31d5d733ff2a6c07953a08e944dbf1c241a3edb",
+    "mouse_glioma_myeloid_k14_ortholog": "cd2525257e50b40f10ef3d604cfc275c2e76c3e9f4955f808d945d5d00c2a583"
+  },
+  "source_sha256": {
+    "index.html": "91ab627d0acf78f45397132b24c019163227b943e4483833f506573ede42608b",
+    "css/site.css": "6ac4399c56269d4a041e52e2e2883fb9a5f8e54b6d7a36656e79f29f0cba3393",
+    "js/ui.js": "fe3ef14248b655277ffff2a447cab2c20b98dbd72e650d71daaa4fa6c735c0fa",
+    "js/backend-worker.js": "98cd640617f13ec6558f6647ad47d0492f1bf80f86a492dfc959fdc23af0dc8f",
+    "js/worker.mjs": "db9530c0119b2c2ee80aacd452990dc3162a177d1fdfa21df29248410633f924"
+  },
+  "no_commit_or_push": true,
+  "inspection_index_group_fix": {
+    "issue": "Group object has no attribute shape during inspect",
+    "change": "Read categorical codes or nullable values group lengths; do not load entire index",
+    "status": "patched_not_yet_browser_or_B6_3_validated"
+  },
+  "inspection_json_return_fix": {
+    "status": "patched_not_yet_browser_or_science_validated"
+  },
+  "pre_run_checks": {
+    "status": "implementation_not_yet_browser_or_B6_3_validated",
+    "includes": [
+      "bundled SHA confirmation",
+      "Python version",
+      "categorical filter selectors",
+      "dtype/shape preflight",
+      "gene overlap preflight"
+    ],
+    "preview_cap_bytes": 536870912
+  },
+  "d1_qc_metadata_schema_v1": {
+    "status": "patched_requires_browser_regression",
+    "added_keys": [
+      "dependency_versions",
+      "nmf_convergence_warning",
+      "nmf_warning_text",
+      "package_version",
+      "python_version",
+      "reference_filename"
+    ]
+  },
+  "ui_final_dark_v1": {
+    "date": "2026-10-27",
+    "branch": "feature/final-dark-ui",
+    "based_on_commit": "3564ab8",
+    "replaced_sources": {
+      "index.html": "e095e2066b45df683949c86f5f2edee77702cb3eab15fdb9b4c4d9693b2f72ed",
+      "js/app.js": "5c7824e3da783f2ea47fe0f23b6cbce47099f6485d87d10ffe0327eeed9e607e"
+    },
+    "removed": [
+      "js/app.js"
+    ],
+    "unchanged_scientific": [
+      "python/engine.py",
+      "js/worker.mjs",
+      "assets/references/*"
+    ],
+    "zip_writer": "ZIP32 writer unchanged; packaging optionally excludes cell_qc.tsv; provenance excludes duplicate version keys",
+    "status": "UI wiring tested with a message-identical stub worker only; real-engine browser regression on the 3 D1 fixtures NOT yet run"
+  },
+  "ui_final_dark_v2": {
+    "date": "2026-10-27",
+    "status": "requires_real_worker_browser_regression_before_git_push",
+    "changes": [
+      "single-H5AD only",
+      "explicit count-layer selection",
+      "explicit gene-symbol selection for ambiguous inputs",
+      "Ensembl-only input rejection",
+      "optional cell_qc.tsv output",
+      "version keys retained exclusively in run_qc.json",
+      "compact Continue buttons"
+    ],
+    "scientific_worker_unchanged": true,
+    "worker_regression": "pending"
+  },
+  "ui_final_dark_v3": {
+    "date": "2026-10-27",
+    "status": "copy_only_update_requires_local_browser_check",
+    "changes": [
+      "select terminology",
+      "short raw-count layer guidance",
+      "title-case progress heading",
+      "scientific progress wording",
+      "compact Keep tab open",
+      "make optional QC export discoverable in Advanced options"
+    ],
+    "scientific_worker_unchanged": true,
+    "backend_worker_unchanged": true,
+    "worker_regression": "existing v2 tests remain required; not run with this copy patch"
+  }
+}
