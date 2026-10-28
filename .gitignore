@@ -183,3 +183,12 @@ vite.config.ts.timestamp-*
 **/logs/
 __pycache__/
 *.pyc
+
+# No private datasets, result archives, or release evidence in this public repo
+*.h5ad
+!tests/fixtures/
+!tests/fixtures/synthetic_*.h5ad
+*.zip
+outputs/
+Context/
+*LOCAL_ONLY*
