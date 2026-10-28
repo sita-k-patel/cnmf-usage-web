@@ -230,8 +230,8 @@ body.is-start .notice-bar { display: none; }
 /* v3 copy refinements: the QC export remains optional in Advanced options. */
 .adv-summary-hint { color: var(--text-3); font-weight: 400; font-size: .92em; }
 
-/* v4: approved Citation / GitHub header buttons and subtle divider. */
-.site-header { border-bottom: 1px solid rgba(134,174,255,.16); padding-bottom: 12px; }
+/* v4: approved Citation / GitHub header buttons. */
+.site-header { padding-bottom: 12px; }
 .header-actions { display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:10px; }
 .header-actions .cite-link, .header-actions .header-link {
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -248,4 +248,72 @@ body.is-start .notice-bar { display: none; }
 @media (max-width:620px) {
   .header-actions { gap:7px; }
   .header-actions .cite-link, .header-actions .header-link { font-size:14px; padding:6px 9px; min-height:35px; }
+}
+
+/* v5 candidate, local preview only — reference pill description and tab-like nav. */
+body.is-start .hero { padding-bottom: 26px; }
+body.is-start .pills { margin-top: 20px; }
+body.is-start .hero-text {
+  margin: 23px auto 0;
+  max-width: 715px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: clamp(16px, 1.5vw, 18px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -.0225em;
+  color: #B8B8B8;
+  text-wrap: pretty;
+}
+/* Inactive buttons are muted; dialog-open or keyboard/mouse focus is selected. */
+.header-actions .cite-link, .header-actions .header-link {
+  background: #202120;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 999px;
+  color: #D3D3D3;
+  font-weight: 500;
+  box-shadow: none;
+  transition: background .14s ease, color .14s ease, border-color .14s ease;
+}
+.header-actions .cite-link:hover, .header-actions .header-link:hover,
+.header-actions .cite-link:focus-visible, .header-actions .header-link:focus-visible,
+.header-actions .cite-link.is-open {
+  background: #2A2D2A;
+  border: 1px solid rgba(255,255,255,.68);
+  color: #FFFFFF;
+  font-weight: 600;
+  transform: none;
+  text-decoration: none;
+}
+.header-actions svg { color: #8D948D; }
+.header-actions .cite-link:hover svg,
+.header-actions .header-link:hover svg,
+.header-actions .cite-link:focus-visible svg,
+.header-actions .header-link:focus-visible svg,
+.header-actions .cite-link.is-open svg { color: #A3F08E; }
+@media (prefers-reduced-motion: reduce) {
+  .header-actions .cite-link, .header-actions .header-link { transition: none; }
+}
+
+/* Keep the three reference pills legible on narrow screens. */
+body.is-start .pills .pill { white-space: nowrap; }
+@media (max-width: 420px) { body.is-start .pills .pill { font-size: 13px; padding: 7px 12px; } }
+
+/* v6: restore original hero reading order and separate intro from calculator. */
+body.is-start .hero { padding-bottom: 13px; }
+body.is-start .hero-text {
+  margin: 17px auto 0;
+  max-width: 715px;
+}
+body.is-start .pills { margin-top: 22px; }
+body.is-start .hero-divider {
+  height: 1px;
+  width: min(880px, 100%);
+  margin: 27px auto 0;
+  background: rgba(255,255,255,.23);
+}
+/* Slightly larger file-picker label; keep the rest of the drop zone unchanged. */
+.drop b { font-size: 19px; line-height: 1.35; }
+@media (max-width: 620px) {
+  body.is-start .hero-divider { margin-top: 22px; }
+  .drop b { font-size: 18px; }
 }
