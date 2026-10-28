@@ -3,7 +3,6 @@
 Browser-based calculator for fixed-reference single-cell program usage in glioma datasets.
 
 **Website:** https://cnmf-usage.tymillerlab.org
-
 **Source:** https://github.com/sita-k-patel/cnmf-usage-web
 
 ## What it does
@@ -39,8 +38,7 @@ Human myeloid programs: Miller TE, El Farran CA, Couturier CP, et al. *Programs,
 
 Mouse ortholog-mapped spectra derive from those human programs; an associated cross-species manuscript is under review. Do not cite it as published.
 
-Scientific package: [cnmf-usage](https://github.com/cwru-non-academic/cnmf-usage). See `CITATION.cff` when available and the citation shown on the website.
-
+Scientific package: [cnmf-usage](https://github.com/cwru-non-academic/cnmf-usage).
 Software license: MIT (Ty Miller Lab), see `LICENSE` and `site/python/LICENSE`. The distributed reference spectra have separate attribution/licensing requirements; see `site/assets/references/LICENSE`.
 
 ## Development
@@ -66,5 +64,4 @@ These checks do **not** replace full browser numerical parity tests. Before publ
 ## Publishing
 
 Cloudflare Pages should publish **only `site/`**, not the repository root. The production branch is `main`. Keep private datasets, results ZIPs, and internal handoffs outside this public GitHub repository.
-
 See [methods](docs/METHODS.md), [validation](docs/VALIDATION.md), and [release procedure](docs/RELEASE.md).
