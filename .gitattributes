@@ -12,3 +12,7 @@
 # Preserve byte-exact reference SHA-256 across Git checkouts
 assets/references/*.tsv -text
 assets/references/*.txt -text
+
+# Preserve byte-exact ortholog and human reference spectra after site/ migration
+site/assets/references/*.tsv -text
+site/assets/references/*.txt -text
