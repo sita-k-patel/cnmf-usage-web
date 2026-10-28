@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "files": {
+    "site/js/worker.mjs": "db9530c0119b2c2ee80aacd452990dc3162a177d1fdfa21df29248410633f924",
+    "site/python/engine.py": "74f9092011f378142ae12653d2eff91f3768da102ce6a773c42ee480ea6cd714",
+    "site/assets/references/human_adult_glioma_allcell_k18.tsv": "7c1268595ba81dd6b941616bdb9e3c61b674875d9ec0cf0862ce4c24e5e17981",
+    "site/assets/references/human_glioma_myeloid_k14.txt": "03cd42331345d64ed8a0583ea31d5d733ff2a6c07953a08e944dbf1c241a3edb",
+    "site/assets/references/mouse_glioma_myeloid_k14_ortholog.tsv": "cd2525257e50b40f10ef3d604cfc275c2e76c3e9f4955f808d945d5d00c2a583"
+  },
+  "notes": "Frozen scientific assets only. Hash checks verify file integrity, not scientific equivalence."
+}
