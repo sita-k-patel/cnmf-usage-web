@@ -38,7 +38,6 @@ Human myeloid programs: Miller TE, El Farran CA, Couturier CP, et al. *Programs,
 Mouse ortholog-mapped spectra derive from those human programs; an associated cross-species manuscript is under review. Do not cite it as published.
 
 Scientific package: [cnmf-usage](https://github.com/cwru-non-academic/cnmf-usage).
-Software license: MIT (Ty Miller Lab), see `LICENSE` and `site/python/LICENSE`. The distributed reference spectra have separate attribution/licensing requirements; see `site/assets/references/LICENSE`.
 
 ## Development
 
