@@ -4,8 +4,6 @@ Browser-based calculator for fixed-reference single-cell program usage in glioma
 
 **Website:** https://cnmf-usage.tymillerlab.org
 
-**Source:** https://github.com/sita-k-patel/cnmf-usage-web
-
 ## What it does
 
 Upload one AnnData `.h5ad` containing raw unnormalized counts in a named layer, select a fixed reference and optional cell populations, then calculate per-cell program usage directly in the browser. The calculator does not learn new gene programs.
