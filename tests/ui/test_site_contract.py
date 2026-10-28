@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 from html.parser import HTMLParser
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 class Page(HTMLParser):
     def __init__(self):
         super().__init__()
